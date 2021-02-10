@@ -16,16 +16,23 @@ body{
 
 .container{
     position:absolute;
-    top:30px;
-    right:50px;
-    bottom:30px;
-    left:50px;
-    width:700px;
-    height:440px;
+    top:10px;
+    right:10px;
+    bottom:10px;
+    left:10px;
+    border-style: dotted;
+    border-color: white;
+    border-radius: 1.5em;
+}
+
+.content{
+    position:absolute;
+    top:7px;
+    right:7px;
+    bottom:7px;
+    left:7px;
+    width:760px;
+    height:460px;
     background-color: white;
     border-radius: 1em;
-    outline-style: dotted;
-    outline-width: 2px;
-    outline-color: white;
-
 }

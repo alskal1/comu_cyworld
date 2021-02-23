@@ -1,0 +1,81 @@
+.content{
+    flex:1;
+    display: flex;
+    margin:10px 0px 10px 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.calendar{
+    display: flex;
+    width:90%;
+    margin:20px 0px 10px 0px;
+    font-size: 9pt;
+    text-align: center;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: lightgray;
+}
+
+.today{
+    color: #1D5D6F;
+    flex: 0 0 2rem;
+    margin: 0 1rem;
+    font-weight: 700;
+    
+}
+
+.day{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.diary-scroll{
+    width:90%;
+    overflow:auto;
+    align-items: center;
+  
+}
+
+.diary{
+    width:95%;
+    margin-top:20px;
+    border:1px solid lightgray;
+
+}
+
+.diary-title{
+    width: 100%;
+    font-size: 9pt;
+    color:#2C8CB7;
+}
+
+.diary-img{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.diary-txt{
+    width:100%;
+    margin: 10px 0px 30px 0px;
+    text-align: center;
+    font-size: 8pt;
+}
+
+.secret{
+    width: 100%;
+    margin-top:20px;
+    background-color: white;
+    color:white;
+    border: 1px solid white;
+    align-items: center;
+}
+
+.secret:hover{
+    background-color: white;
+    color:black;
+    border: 1px solid lightgray;
+}

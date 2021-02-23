@@ -82,6 +82,8 @@ body{
     flex:0.5;
 }
 
+
+
 .number{
     flex:0;
     font-size: 9pt;
@@ -178,6 +180,7 @@ body{
 }
 
 .item{
+    flex:0;
     margin-top: 10px;
     padding:2px;
     font-size: 10pt;

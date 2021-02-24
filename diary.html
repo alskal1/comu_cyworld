@@ -44,36 +44,37 @@
                     <div class="content box">
                         <div class="calendar">
                             <span class="today">02.30 TUE</span>
-                            <span class="day">1</span>
-                            <span class="day">2</span>
-                            <span class="day">3</span>
-                            <span class="day">4</span>
-                            <span class="day">5</span>
-                            <span class="day">6</span>
-                            <span class="day">7</span>
-                            <span class="day">8</span>
-                            <span class="day">9</span>
-                            <span class="day">10</span>
-                            <span class="day">11</span> 
-                            <span class="day">12</span>
-                            <span class="day">13</span>
-                            <span class="day">14</span>
-                            <span class="day">15</span>
-                            <span class="day">16</span>
-                            <span class="day">17</span>
-                            <span class="day">18</span>
-                            <span class="day">19</span>
-                            <span class="day">20</span>
-                            <span class="day">21</span>
-                            <span class="day">22</span>
-                            <span class="day">23</span>
-                            <span class="day">24</span>
-                            <span class="day">25</span>
-                            <span class="day">26</span>                         
-                            <span class="day">27</span>
-                            <span class="day">28</span>
-                            <span class="day">29</span>                            
-                            <span class="day">30</span>
+                            <span class="day-list">
+                              <span class="day">1</span>
+                              <span class="day">2</span>
+                              <span class="day">3</span>
+                              <span class="day">4</span>
+                              <span class="day">5</span>
+                              <span class="day">6</span>
+                              <span class="day" style="color:red;">7</span>
+                              <span class="day">8</span>
+                              <span class="day">9</span>
+                              <span class="day">10</span>
+                              <span class="day">11</span> 
+                              <span class="day">12</span>
+                              <span class="day">13</span>
+                              <span class="day"style="color:red;">14</span>
+                              <span class="day">15</span>
+                              <span class="day">16</span>
+                              <span class="day">17</span>
+                              <span class="day">18</span>
+                              <span class="day">19</span>
+                              <span class="day">20</span>
+                              <span class="day"style="color:red;">21</span>
+                              <span class="day">22</span>
+                              <span class="day">23</span>
+                              <span class="day">24</span>
+                              <span class="day">25</span>
+                              <span class="day">26</span>                         
+                              <span class="day">27</span>
+                              <span class="day"style="color:red;">28</span>
+                              <span class="day">29</span>                            
+                              <span class="day">30</span>
                         </div>
                         <div class="diary-scroll">
                             <div class="diary">
@@ -94,7 +95,13 @@
                                     <div class="diary-txt">오랜만에 바다 오니까 너무 좋다유ㅠㅠ 칼국수도 먹었댜!!</div>
                                 </div>
                             </div>
-                            <input type="button" value="코콩의 비밀일기 보기" class="secret"/>
+                            <button class="secret" onclick="getTextFile()">코콩의 비밀일기 보기</button>
+                            <div class="diary" id="hide">
+                              <div class="diary-title">코콩의 비밀일기</div>
+                              <div class="diary-img">
+                                <div class="diary-txt" id="diary-secret"></div>
+                              </div>
+                            </div>
                         </div>
                     </div>
                   </div>        
@@ -110,5 +117,26 @@
               </div>
             </div>
           </div>
+      <script>
+        function getTextFile(){
+          var input = document.createElement("input");
+          input.type= "file";
+          input.accept ="text/plain";
+          input.onchange = function(event) {
+            processFile(event.target.files[0]);
+          };
+          input.click();
+        }
+
+        function processFile(file){
+          var reader = new FileReader();
+          reader.readAsText(file, "utf-8");
+
+          reader.onload = function() {
+            document.getElementById("diary-secret").innerText = reader.result;
+            document.getElementById("hide").style.display="block";
+          };
+        }
+      </script>
     </body>
 </html>

@@ -1,0 +1,37 @@
+.content{
+    flex:1;
+    display: flex;
+    margin:10px 0px 10px 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 0.5em;
+    overflow: auto;
+}
+
+.guest-title{
+    width: 90%;
+    margin-top: 20px;
+    padding: 5px;
+    border-top: 1px solid gray;
+    background-color: #e7e7e7;
+    font-size: 9pt;
+    color:#424242;
+}
+
+.guest-img{
+    margin-top: 10px;
+    width: 90%;
+    background-image: url("./images/white.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.upload-img{
+    width:130px;
+    height:130px;
+}
+
+.guest-txt{
+    font-size: 9pt;
+    margin-left: 20px;
+}
